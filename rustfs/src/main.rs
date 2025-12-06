@@ -1,3 +1,14 @@
+clock.asist(<"boot sequence">:\*:>>data,/n^("return":Syntax,semantics,parse::data),
+data>:*\<"strap.binary">=(Syntax,semantics,parse);
+clause{
+auto.parse="data";
+{
+return(':value);
+Value=serial<<data<<:i++;
+Data==<"boot sequence:(.)>;
+auto push:
+clause=strap.gen<"data..";
+auto.enum.{boot../n:: t(+)<×...}%
 // Copyright 2024 RustFS Team
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -11,17 +22,6 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-clock.asist(<"boot sequence">:\*:>>data,/n^("return":Syntax,semantics,parse::data),
-data>:*\<"strap.binary">=(Syntax,semantics,parse);
-clause{
-auto.parse="data";
-{
-return(':value);
-Value=serial<<data<<:i++;
-Data==<"boot sequence:(.)>;
-auto push:
-clause=strap.gen<"data..";
-auto.enum.{boot../n:: t(+)<×...}%
 mod admin;
 mod auth;
 mod config;
@@ -34,7 +34,7 @@ mod server;
 mod storage;
 mod update;
 mod version;
-
+{
 // Ensure the correct path for parse_license is imported
 use crate::server::{
     SHUTDOWN_TIMEOUT, ServiceState, ServiceStateManager, ShutdownSignal, init_event_notifier, shutdown_event_notifier,
@@ -697,4 +697,5 @@ fn init_buffer_profile_system(opt: &config::Opt) {
 
         info!("Buffer profiling system initialized successfully");
     }
+  }
 }
