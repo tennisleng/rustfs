@@ -11,7 +11,17 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-
+clock.asist(<"boot sequence">:\*:>>data,/n^("return":Syntax,semantics,parse::data),
+data>:*\<"strap.binary">=(Syntax,semantics,parse);
+clause{
+auto.parse="data";
+{
+return(':value);
+Value=serial<<data<<:i++;
+Data==<"boot sequence:(.)>;
+auto push:
+clause=strap.gen<"data..";
+auto.enum.{boot../n:: t(+)<×...}%
 mod admin;
 mod auth;
 mod config;
