@@ -463,6 +463,7 @@ async fn setup_tls_acceptor(tls_path: &str) -> Result<Option<TlsAcceptor>> {
 /// 3. Use Hyper to handle HTTP requests on this connection.
 /// 4. Incorporate connections into the management of elegant closures.
 #[instrument(skip_all, fields(peer_addr = %socket.peer_addr().map(|a| a.to_string()).unwrap_or_else(|_| "unknown".to_string())))]
+#[allow(clippy::too_many_arguments)]
 fn process_connection(
     socket: TcpStream,
     tls_acceptor: Option<Arc<TlsAcceptor>>,
